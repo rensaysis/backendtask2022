@@ -3,7 +3,7 @@
 $username = "root"; 
 $pass = ""; 
 $host = "localhost"; 
-$dbname = "library";  // example database name 'library'
+$dbname = "library";  // example database 'library'
 	
 $db = @mysqli_connect($host, $username, $pass, $dbname);
 
