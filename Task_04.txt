@@ -1,0 +1,10 @@
+SELECT
+books.book_name,
+CONCAT_WS(' ', authors.first_name, authors.last_name) AS author_name,
+books.publish_date
+FROM books
+LEFT JOIN authors ON books.author_id=authors.id
+WHERE books.author_id=authors.id AND YEAR(books.publish_date) = '2021' AND MONTH(books.publish_date) = '1'
+ORDER BY books.publish_date
+DESC
+LIMIT 1
